@@ -337,6 +337,7 @@ endif
 DEVICE_MATRIX_FILE := \
 	device/google/gs201/compatibility_matrix.xml
 
+# Include Overlays At Runtime Configuration
 DEVICE_PACKAGE_OVERLAYS += device/google/gs201/overlay
 
 # This device is shipped with 33 (Android T)
@@ -596,6 +597,15 @@ PRODUCT_PACKAGES += \
 # Connectivity
 PRODUCT_PACKAGES += \
         ConnectivityOverlay
+
+# RRO Packages
+PRODUCT_PACKAGES += \
+    CarrierSettingsOverlay \
+    CarrierSettingsConfigOverlay \
+    CarrierSettingsProviderOverlay \
+    CarrierSettingsSystemUIOverlay \
+    TeleServiceOverlay \
+    TelephonyProviderOverlay
 
 PRODUCT_PACKAGES_ENG += \
 	f2fs_io \
